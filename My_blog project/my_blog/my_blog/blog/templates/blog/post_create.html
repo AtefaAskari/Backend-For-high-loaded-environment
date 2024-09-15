@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create New Post</title>
+</head>
+<body>
+    <h1>Create a New Blog Post</h1>
+    <form method="POST">
+        {% csrf_token %}  <!-- Important for security -->
+        {{ form.as_p }}  <!-- Renders the form fields as paragraphs -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
